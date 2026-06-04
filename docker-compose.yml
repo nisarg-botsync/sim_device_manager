@@ -16,6 +16,8 @@ services:
       - "44818-44899:44818-44899"
     volumes:
       - sqlite_data:/app/data
+    networks:
+      - syncos_default
 
   frontend:
     build:
@@ -25,6 +27,12 @@ services:
       - "80:80"
     depends_on:
       - backend
+    networks:
+      - syncos_default
 
 volumes:
   sqlite_data:
+
+networks:
+  syncos_default:
+    external: true
