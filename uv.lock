@@ -216,6 +216,18 @@ source = { registry = "https://pypi.org/simple" }
 sdist = { url = "https://files.pythonhosted.org/packages/48/24/7e19b1939370b0b0ed301af37f12124cd9c03db43bfcc2101d88d877e3c8/greenery-2.1.tar.gz", hash = "sha256:759c3bf40b6fe6ef0a6b373230d07470e0e315f32bcdbaf381901b0d8a6f91d1", size = 30087, upload-time = "2014-10-17T22:42:33.049Z" }
 
 [[package]]
+name = "gunicorn"
+version = "26.0.0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "packaging" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/6d/b7/a4a3f632f823e432ce6bc65f62961b7980c898c77f075a2f7118cb3846fe/gunicorn-26.0.0.tar.gz", hash = "sha256:ca9346f85e3a4aeeb64d491045c16b9a35647abd37ea15efe53080eb8b090baf", size = 727286, upload-time = "2026-05-05T06:38:25.529Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/e6/40/9c2384fc2be4ad25dd4a49decd5ad9ea5a3639814c11bd40ab77cb9f0a14/gunicorn-26.0.0-py3-none-any.whl", hash = "sha256:40233d26a5f0d1872916188c276e21641155111c2853f0c2cd55260aec0d24fc", size = 212009, upload-time = "2026-05-05T06:38:23.007Z" },
+]
+
+[[package]]
 name = "idna"
 version = "3.15"
 source = { registry = "https://pypi.org/simple" }
@@ -428,6 +440,7 @@ dependencies = [
     { name = "django" },
     { name = "django-cors-headers" },
     { name = "djangorestframework" },
+    { name = "gunicorn" },
     { name = "psutil" },
     { name = "pymodbus" },
 ]
@@ -445,6 +458,7 @@ requires-dist = [
     { name = "django", specifier = ">=5.0,<6.0" },
     { name = "django-cors-headers", specifier = ">=4.3" },
     { name = "djangorestframework", specifier = ">=3.15" },
+    { name = "gunicorn", specifier = ">=26.0.0" },
     { name = "psutil", specifier = ">=5.9" },
     { name = "pymodbus", specifier = ">=3.6" },
 ]
